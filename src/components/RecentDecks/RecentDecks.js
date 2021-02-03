@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import {Link, useHistory} from "react-router-dom";
+import {Link} from "react-router-dom";
 import {Card, Avatar, Icon, Spin} from "antd";
 import {getRecentDecks} from "../../state/actions/decks";
 import styles from "./RecentDecks.module.css";
@@ -17,7 +17,7 @@ export const RecentDecks = ({recentDecks, getRecentDecks}) => {
         setLoading(false);
       })
       .catch(error => setError(error));
-  }, [getRecentDecks]);
+  }, [getRecentDecks, error]);
   const location = id => ({
     pathname: `/deck/${id}`,
     state: {source: "personal"},

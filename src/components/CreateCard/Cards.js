@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {Card, Button, Icon, Modal, Avatar} from "antd";
+import {Card, Button, Icon, Modal} from "antd";
 import {getCards, deleteCard, getDeckId} from "../../state/actions/CardAction";
 import {connect} from "react-redux";
 import styles from "./AddCard.module.css";

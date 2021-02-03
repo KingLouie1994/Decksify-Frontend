@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Progress, Button, Icon, PageHeader, Alert, Spin} from "antd";
+import {Progress, Button, Icon, PageHeader, Spin} from "antd";
 import * as styles from "./PlayMode.module.less";
 import FlipCard from "../../components/PlayMode/FlipCard/FlipCard";
 import SummaryModal from "../../components/PlayMode/SummaryModal";
@@ -41,7 +41,7 @@ export function PlayMode({
       .catch(error => setError(error))
       .finally(() => setLoading(false));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [fetchDeckById, match.params.deckId, touchDeck]);
+  }, [fetchDeckById, match.params.deckId, touchDeck, loading]);
   useEffect(() => {
     if (deckInPlaySession) {
       touchDeck(deckInPlaySession);
